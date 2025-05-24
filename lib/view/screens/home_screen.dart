@@ -81,6 +81,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final buttonMinSize = Size(screenWidth * 0.24, screenHeight * 0.045);
 
     return Scaffold(
+      bottomNavigationBar: CustomNavBar(
+        onTabChanged: _handleTabChanged,
+      ),
       body: Container(
         color: const Color(0xFF1E1E1E),
         child: Column(
@@ -303,9 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            CustomNavBar(
-              onTabChanged: _handleTabChanged,
-            ),
+            // Removed CustomNavBar from here
           ],
         ),
       ),
