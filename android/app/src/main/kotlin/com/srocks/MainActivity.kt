@@ -1,4 +1,4 @@
-package com.srocks.srocks_music_assignment
+package com.srocks
 
 import io.flutter.embedding.android.FlutterActivity
 
