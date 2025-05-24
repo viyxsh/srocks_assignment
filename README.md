@@ -15,16 +15,17 @@ The project follows a MVVM architecture pattern with the following structure:
 
 ```
 lib/
-├── core/               # Core functionalities and configurations
+├── models/             # Data models
+├── repository/         # Repository for data abstraction
+├── services/           # External services
+├── utils/              # Utility functions and constants
 │   ├── constants/      # Application constants
-│   ├── di/             # Dependency injection
-│   ├── services/       # External services
-│   ├── models/         # Data models
-│   ├── view/           # UI-related components
-│   │   ├── screens/    # Application screens
-│   │   ├── widgets/    # Reusable UI components
-│   │   └── viewmodel/  # View models for state management
-│   └── main.dart       # Application entry point
+│   └── di/             # Dependency injection setup
+├── view/               # UI-related components
+│   ├── screens/        # Application screens
+│   └── widgets/        # Reusable UI components
+├── viewmodel/          # View models for state management
+└── main.dart           # Application entry point
 ```
 
 ### Key Components
