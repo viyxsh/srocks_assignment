@@ -25,6 +25,19 @@ class HomeViewModel extends ChangeNotifier {
     _services = await _firestoreService.getServices();
     _banner = await _firestoreService.getBanner();
 
+    final desiredOrder = [
+      'Music Production',
+      'Mixing & Mastering',
+      'Lyrics Writing',
+      'Vocals',
+    ];
+
+    _services.sort((a, b) {
+      int indexA = desiredOrder.indexOf(a.title);
+      int indexB = desiredOrder.indexOf(b.title);
+      return indexA.compareTo(indexB);
+    });
+
     _isLoading = false;
     notifyListeners();
   }
